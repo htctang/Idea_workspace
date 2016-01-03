@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script language="JavaScript">
+        function test(){
+            alert("hello test");
+        }
+        function addSelect(){
+            var sel = document.createElement("select");
+            sel.options[0]=new Option("篮球","");
+            sel.options[1]=new Option("足球","");
+            document.form1.appendChild(sel)
+            //window.close(); //关闭选项卡 在谷歌浏览器下面无法实现关闭窗口
+
+
+        }
+        function dblcTest(){
+            alert("dblcTest hahha");
+        }
+    </script>
+    <style>
+        <!--
+            .Button1{
+                width: 40px;
+                height: 40px;
+                font-size: 1em;
+                font-family: 隶书;
+                background: blue;
+            }
+        -->
+    </style>
+</head>
+<!--将事件监控放在body内在表示整个页面都接受这个事件-->
+<body ondblclick="dblcTest()">
+<script language="JavaScript">
+    var n=6;
+    arraObj = new Array();
+    for(var i=0;i<5;i++){
+        arraObj[i]=i;
+        document.write(arraObj[i]);
+    }
+</script>
+<form action="" id="form1">
+<font size="10pt" face="隶书"><a href="#" onclick=addSelect()>javaScript技术论坛</a></font>
+    <button id="button" value="test" class="Button1" onclick="">test</button>
+</form>
+<script language="JavaScript">
+   document.linkColor="blue";
+   document.vlinkColor="red";
+   document.alinkColor="#000000";
+    document.write("hello test");
+    /*window.alert("警告框");
+    window.confirm("waa");*/
+   /*form1.button.onclick= function () {
+       window.alert("haha");
+   }*/
+
+   }
+    form1.button.onclick=function (){
+        alert("haaa");
+    }
+
+</script>
+</body>
+</html>

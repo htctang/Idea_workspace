@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 id="h1">JavaScript</h3>
+<b>自学视频教程</b>
+<form name="frm" action="#" method="get">
+    节点名称：<input type="text" id="na"><br>
+    节点类型：<input type="text" id="ty"><br>
+    节点的值：<input type="text" id="va"><br>
+    <input type="button" value="父节点" onclick="txt=nodeS(txt,'parent');"/>
+    <input type="button" value="第一个子节点" onclick="txt=nodeS(txt,'firstChild');"/>
+    <input type="button" value="最后一个字节点" onclick="txt=nodeS(txt,'lastChild');"/>
+    <input type="button" name="button" onclick="txt=nodeS(txt,'nextSibling');" value="前一个兄弟节点"/>
+    <input type="button" value="最后一个兄弟节点" onclick="txt=nodeS(txt,'nextS(txt,'nextSibing');"/>
+    <input type="button" value="返回根节点" onclick="txt=document.documentElement;txtUpdate(txt);"/>
+</form>
+<script language="JavaScript">
+    dc();
+    function txtUpdate(txt){
+        window.document.frm.na.value=txt.nodeName;
+        window.document.frm.ty.value=txt.nodeType;
+        window.document.frm.va.value=txt.nodeValue;
+    }
+    function nodeS(txt,nodeName){
+        switch (nodeName){
+            case "previousSibling":
+                if(txt.previousSibling){
+                    txt=txt.previousSibling;
+                }else{
+                    alert("无兄弟节点");
+                }
+                break;
+            case "nextSibling":
+                if (txt.nextSibling){
+                    txt=txt.nextSibling;
+                }else{
+                    alert("无兄弟节点");
+                }
+                break;
+
+        }
+    }
+    function dc(){
+        var aText=["第一个节点内容","第二个节点内容","第三个节点内容","第四个节点内容"];
+        var cdf=document.createDocumentFragment();
+        for(var i=0;i<aText.length;i++){
+            var ce=document.createElement("b");
+            var cb=document.createElement("br");
+            var cText=document.createTextNode(aText[i]);
+            ce.appendChild(cText);
+            cdf.appendChild(ce);
+            cdf.appendChild(cb);
+        }
+        document.body.appendChild(cdf);
+    }
+</script>
+</body>
+</html>

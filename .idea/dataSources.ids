@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - test@localhost" uuid="be61a09f-a1ee-49c6-b365-0a90a4dc49fd">
+    <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.37 ( Revision: 09940f05b4c98150f352e787a2549f11a2e9da93 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="test"/>
+      <table id="2" parent="1" name="student"/>
+      <table id="3" parent="1" name="students"/>
+      <table id="4" parent="1" name="tb_commodity"/>
+      <table id="5" parent="1" name="users"/>
+      <column id="6" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="7" parent="2" name="school">
+        <data-type>char(20)</data-type>
+      </column>
+      <column id="8" parent="2" name="sex">
+        <data-type>char(4)</data-type>
+      </column>
+      <column id="9" parent="2" name="name">
+        <data-type>char(20)</data-type>
+      </column>
+      <key id="10" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="11" parent="3" name="sid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="12" parent="3" name="sname">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="13" parent="3" name="gender">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="14" parent="3" name="birthday">
+        <data-type>date</data-type>
+      </column>
+      <column id="15" parent="3" name="address">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="16" parent="3" name="PRIMARY">
+        <columns>sid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="17" parent="4" name="id">
+        <comment>商品编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="18" parent="4" name="name">
+        <comment>商品名字</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="19" parent="4" name="count">
+        <comment>商品数量</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="20" parent="4" name="price">
+        <comment>商品价格</comment>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="21" parent="4" name="remark">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="22" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="23" parent="5" name="uid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="24" parent="5" name="username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="25" parent="5" name="password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="26" parent="5" name="PRIMARY">
+        <columns>uid</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

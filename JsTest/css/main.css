@@ -1,0 +1,46 @@
+.start-section{
+
+}
+.start-img{
+    display: block;
+   margin:0 auto;
+}
+.min-section{
+    width: 694px;
+    height: 341px;
+    display: block;
+    margin: 0 auto;
+}
+/*.min-section :after{
+    content: '';
+    display: block;
+    clear: both;
+}*/
+.min-left{
+    display: block;
+    margin: 0 auto;
+    background-color: #ffffff;
+    width: 20%;
+    height: 100%;
+    float: left;
+
+}
+.min-right{
+    width: 79%;
+    height: 100%;
+    float: left;
+    background-color:#ffffff;
+}
+.hr{
+    background-color: red;
+    width: 0.5%;
+    height: 80%;
+    float: left;
+}
+.content{
+    background: #F8F8F8;
+    padding: 30px 30px 20px 30px;
+}
+.input-magin{
+    margin-top: 16px;
+}

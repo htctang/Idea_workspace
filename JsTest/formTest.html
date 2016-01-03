@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table align="center" width="337" height="204" border="0">
+        <tr>
+            <td width="108">用户名：</td>
+            <td width="213">
+                <form action="#" method="post" name="form1">
+                    <input type="text" name="testfileld" onfocus="txtfocus()" onblur="textblur()">
+                </form></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td>
+                <form action="" method="post" name="form2">
+                    <input type="text" name="textfield2" onclick="txtfocus()" onblur="textblur()">
+                </form></td>
+        </tr>
+        <tr>
+            <td>真实姓名:</td>
+            <td>
+                <form action="" method="post" name="form3">
+                    <input type="text" name="textfield3" onclick="txtfocus()" onblur="textblur()">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>性别:</td>
+            <td>
+                <form action="" method="post" name="form4">
+                    <input type="text" name="textfield5" onfocus="txtfocus()" onblur="textblur()">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>邮箱：</td>
+            <td>
+            <form action="" method="post">
+                <input type="text" name="textfield4" onfocus="txtfocus()" onblur="textblur()">
+            </form>
+            </td>
+        </tr>
+        
+    </table>
+    <select name="hobby" id="" multiple="multiple">
+        <option value="跑步">跑步</option>
+        <option value="游泳" selected>游泳</option>
+        <option value="篮球">篮球</option>
+    </select>
+    <form action="" id="form1" name="myform" method="post">
+        用户名：<input type="text" name="username" size="15"><br>
+        密码：<input type="text" name="password" maxlength="8" size="15"><br>
+        <input type="submit" name="sub1" value="登录" onclick="form.submit()">
+    </form>
+    <script language="JavaScript">
+        <!--
+        /*
+        * txtfocus()得到焦点时
+        * textblur()失去焦点
+        * */
+            function txtfocus(event){
+                var e = window.event;
+                var obj = e.srcElement;
+                obj.style.background="blue";
+            }
+        function textblur(event){
+            var e = window.event;
+            var obj = e.srcElement;
+            obj.style.background="#ffffff";
+        }
+        var x= 0,y=0;
+        function MousePlace(){
+            x=window.event.x;
+            y=window.event.y;
+            window.status="鼠标在页面中的当前位置X="+x+"Y="+y;
+        }
+        function checkinput(){
+            if(myform.username.value==""){
+                alert("请输入用户名！");
+                form1.username.select();
+                return false;
+            }
+            if(myform.password.value==""){
+                alert("请输入密码！");
+                form1.password.select();
+                return false;
+            }
+            return true;
+        }
+        -->
+        document.onmousemove=MousePlace;
+    </script>
+</body>
+</html>

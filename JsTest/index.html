@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script language="javascript">
+        function checkrealname(password){
+            var str=realname;
+            //在JavaScript中，正则表达式只能使用"/"开头和结束，不能使用双引号
+            var Expression=/[^\u4E00-\u9FA5]/;
+            var objExp=new RegExp(Expression);
+            if(objExp.test(str)==true){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        function check(myform){
+            if(myform.realname.password==""){
+                alert("请输入真实姓名!");myform.password.focus();return;
+            }
+            if(checkrealname(myform.password.value)){
+                alert("您输入真实姓名不正确!");myform.password.focus();return;
+            }
+            myform.submit();
+        }
+    </script>
+</head>
+<body>
+    <section class="start-section">
+        <img src="Images/01.gif" class="start-img">
+    </section>
+    <section class="min-section">
+        <div class="min-left">
+            注册帮助
+        </div>
+        <div class="hr"></div>
+        <div class="min-right">
+            <div class="content">
+                <form action="" method="post" name="form1">
+                    用户名:
+                    <input class="input-magin" type="text"/><br>
+                    密码:
+                    <input class="input-magin"type="password"/><br>
+                    确认密码:
+                    <input class="input-magin"type="password" name="password"/><br>
+                    <input class="input-magin"name="sex" type="radio">男</input>
+                    <input name="sex" type="radio">女</input><br>
+                    真实姓名:
+                    <input class="input-magin"type="text"><br>
+                    生日:
+                    <input class="input-magin"type="date" value="2014-2-2"><br>
+                    QICQ号码:
+                    <input class="input-magin"type="number"><br>
+                    Email:
+                    <input class="input-magin"type="email"><br>
+                    <input type="submit" onclick=check(form1)>&nbsp;&nbsp;<input type="reset">
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="last-section"></section>
+</body>
+</html>
